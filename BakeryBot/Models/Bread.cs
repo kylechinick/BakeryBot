@@ -28,12 +28,12 @@ namespace BakeryBot.Models
           {
             breadSumCost = _BreadCost * BreadQuantity;
           }
-          else if (BreadQuantity % 3 == 0)
-          {
-            breadSumCost = 
-            _BreadCost * BreadQuantity 
-            - (_BreadDiscount * (BreadQuantity / 3));
-          }
+          // else if (BreadQuantity % 3 == 0)
+          // {
+          //   breadSumCost = 
+          //   _BreadCost * BreadQuantity 
+          //   - (_BreadDiscount * (BreadQuantity / 3));
+          // }
           else
           {
             breadSumCost = 
