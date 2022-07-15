@@ -40,5 +40,13 @@ namespace BakeryBot.Tests
       Bread bread = new Bread(breadQuantity);
       Assert.AreEqual(breadCost, bread.getBreadCost());
     }
+    [TestMethod]
+    public void BreadCost_ReturnCostForNonPowerOfThreeBread_Int()
+    {
+      int breadQuantity = 16;
+      double breadCost = 40;
+      Bread bread = new Bread(breadQuantity);
+      Assert.AreEqual(breadCost, bread.getBreadCost());
+    }
   }
 }
