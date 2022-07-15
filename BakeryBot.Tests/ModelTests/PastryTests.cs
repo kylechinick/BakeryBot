@@ -20,7 +20,7 @@ namespace BakeryBot.Tests
     public void PastryCost_ReturnCostForTwoPastry_Int()
     {
       int pastryQuantity = 2;
-      double pastryCost = 10;
+      double pastryCost = 4;
       Pastry pastry = new Pastry(pastryQuantity);
       Assert.AreEqual(pastryCost, pastry.getPastryCost());
     }
