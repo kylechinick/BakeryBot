@@ -30,7 +30,7 @@ namespace BakeryBot.Models
           }
           else if (BreadQuantity % 3 == 0)
           {
-            breadSumCost += _BreadCost * BreadQuantity - _BreadDiscount;
+            breadSumCost += _BreadCost * BreadQuantity - (_BreadDiscount * (BreadQuantity / 3));
           }
           return breadSumCost;
         }
