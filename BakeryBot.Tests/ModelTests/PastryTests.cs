@@ -32,14 +32,14 @@ namespace BakeryBot.Tests
       Pastry pastry = new Pastry(pastryQuantity);
       Assert.AreEqual(pastryCost, pastry.getPastryCost());
     }
-    // [TestMethod]
-    // public void PastryCost_ReturnCostForTwelvePastry_Int()
-    // {
-    //   int pastryQuantity = 12;
-    //   double pastryCost = 40;
-    //   Pastry pastry = new Pastry(pastryQuantity);
-    //   Assert.AreEqual(pastryCost, pastry.getPastryCost());
-    // }
+    [TestMethod]
+    public void PastryCost_ReturnCostForFourPastry_Int()
+    {
+      int pastryQuantity = 4;
+      double pastryCost = 4;
+      Pastry pastry = new Pastry(pastryQuantity);
+      Assert.AreEqual(pastryCost, pastry.getPastryCost());
+    }
     // [TestMethod]
     // public void PastryCost_ReturnCostForNonPowerOfThreePastry_Int()
     // {
