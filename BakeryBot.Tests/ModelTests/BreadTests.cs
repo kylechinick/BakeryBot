@@ -11,7 +11,6 @@ namespace BakeryBot.Tests
     [TestMethod]
     public void BreadCost_ReturnBaseCost_Int()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
       int breadQuantity = 1;
       double breadCost = 5;
       Bread bread = new Bread(breadQuantity);
@@ -20,7 +19,6 @@ namespace BakeryBot.Tests
     [TestMethod]
     public void BreadCost_ReturnCostForTwoBread_Int()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
       int breadQuantity = 2;
       double breadCost = 10;
       Bread bread = new Bread(breadQuantity);
@@ -29,9 +27,16 @@ namespace BakeryBot.Tests
     [TestMethod]
     public void BreadCost_ReturnCostForThreeBread_Int()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
       int breadQuantity = 3;
       double breadCost = 10;
+      Bread bread = new Bread(breadQuantity);
+      Assert.AreEqual(breadCost, bread.getBreadCost());
+    }
+    [TestMethod]
+    public void BreadCost_ReturnCostForTwelveBread_Int()
+    {
+      int breadQuantity = 12;
+      double breadCost = 40;
       Bread bread = new Bread(breadQuantity);
       Assert.AreEqual(breadCost, bread.getBreadCost());
     }
