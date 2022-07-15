@@ -17,16 +17,20 @@ namespace BakeryBot.Models
         public Bread(int breadQuantity)
         {
             _BreadCost = BreadCost;
-            _BreadDiscount = 0.5;
+            _BreadDiscount = 5;
             BreadQuantity = breadQuantity;
         }
 
         public double getBreadCost()
         {
           double breadSumCost = 0;
-          if (BreadQuantity == 1)
+          if (BreadQuantity < 3)
           {
-            breadSumCost = BreadCost;
+            breadSumCost += _BreadCost * BreadQuantity;
+          }
+          else if (BreadQuantity % 3 == 0)
+          {
+            breadSumCost += _BreadCost * BreadQuantity - _BreadDiscount;
           }
           return breadSumCost;
         }

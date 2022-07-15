@@ -26,5 +26,14 @@ namespace BakeryBot.Tests
       Bread bread = new Bread(breadQuantity);
       Assert.AreEqual(breadCost, bread.getBreadCost());
     }
+    [TestMethod]
+    public void BreadCost_ReturnCostForThreeBread_Int()
+    {
+      // any necessary logic to prep for test; instantiating new classes, etc.
+      int breadQuantity = 3;
+      double breadCost = 10;
+      Bread bread = new Bread(breadQuantity);
+      Assert.AreEqual(breadCost, bread.getBreadCost());
+    }
   }
 }
