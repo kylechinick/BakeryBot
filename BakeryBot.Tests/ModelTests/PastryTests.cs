@@ -1,19 +1,52 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using System;
-// using System.Collections.Generic;
-// using BakeryBot.Models.Pastry;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
+using BakeryBot.Models;
 
-// namespace BakeryBot.Tests.Pastry
-// {
-//   [TestClass]
-//   public class PastryTests
-//   {
-//     // Test methods go here
-//     [TestMethod]
-//     public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-//     {
-//       // any necessary logic to prep for test; instantiating new classes, etc.
-//       Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-//     }
-//   }
-// }
+namespace BakeryBot.Tests
+{
+  [TestClass]
+  public class PastryTests
+  {
+    [TestMethod]
+    public void PastryCost_ReturnBaseCost_Int()
+    {
+      int pastryQuantity = 1;
+      double pastryCost = 5;
+      Pastry pastry = new Pastry(pastryQuantity);
+      Assert.AreEqual(pastryCost, pastry.getPastryCost());
+    }
+    [TestMethod]
+    public void PastryCost_ReturnCostForTwoPastry_Int()
+    {
+      int pastryQuantity = 2;
+      double pastryCost = 10;
+      Pastry pastry = new Pastry(pastryQuantity);
+      Assert.AreEqual(pastryCost, pastry.getPastryCost());
+    }
+    [TestMethod]
+    public void PastryCost_ReturnCostForThreePastry_Int()
+    {
+      int pastryQuantity = 3;
+      double pastryCost = 10;
+      Pastry pastry = new Pastry(pastryQuantity);
+      Assert.AreEqual(pastryCost, pastry.getPastryCost());
+    }
+    [TestMethod]
+    public void PastryCost_ReturnCostForTwelvePastry_Int()
+    {
+      int pastryQuantity = 12;
+      double pastryCost = 40;
+      Pastry pastry = new Pastry(pastryQuantity);
+      Assert.AreEqual(pastryCost, pastry.getPastryCost());
+    }
+    [TestMethod]
+    public void PastryCost_ReturnCostForNonPowerOfThreePastry_Int()
+    {
+      int pastryQuantity = 17;
+      double pastryCost = 70;
+      Pastry pastry = new Pastry(pastryQuantity);
+      Assert.AreEqual(pastryCost, pastry.getPastryCost());
+    }
+  }
+}
