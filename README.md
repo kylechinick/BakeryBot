@@ -1,6 +1,8 @@
 # BakeryBot
 
-#### (Brief Description of Application)
+#### About
+
+Point of Sale App: receives orders, applies discounts unique to each product, confirms total cost
 
 #### By Kyle Chinick
 
