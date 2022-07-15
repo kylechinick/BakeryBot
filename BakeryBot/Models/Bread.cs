@@ -23,7 +23,12 @@ namespace BakeryBot.Models
 
         public double getBreadCost()
         {
-          return 1;
+          double breadSumCost = 0;
+          if (BreadQuantity == 1)
+          {
+            breadSumCost = BreadCost;
+          }
+          return breadSumCost;
         }
     }
 }
