@@ -7,7 +7,6 @@ namespace BakeryBot.Models
     private static double _PastryCost = 2;
     private double _PastryDiscount;
     public int PastryQuantity { get; set; }
-
     public static double PastryCost
     {
       get { return _PastryCost; }
@@ -20,27 +19,13 @@ namespace BakeryBot.Models
       _PastryDiscount = 5;
       PastryQuantity = pastryQuantity;
     }
-
     public double getPastryCost()
     {
       double pastrySumCost = 0;
-      // if (PastryQuantity < 3)
-      // {
-      //   pastrySumCost = _PastryCost * PastryQuantity;
-      // }
       if (PastryQuantity % 3 == 0)
       {
-        pastrySumCost = _PastryCost * (PastryQuantity / 3);
-
-        // double numberOfDiscountedPastries = PastryQuantity / 3;
-
-        // pastrySumCost = _PastryCost * PastryQuantity - (_PastryDiscount * (PastryQuantity / 3));
+        pastrySumCost = _PastryDiscount * (PastryQuantity / 3); 
       }
-      // else if (something)
-      // {
-      //   double numberOfDiscountedPastries = PastryQuantity / 3;
-      //   // ...?
-      // }
       else
       {
         pastrySumCost = _PastryCost * PastryQuantity;
@@ -49,3 +34,20 @@ namespace BakeryBot.Models
     }
   }
 }
+
+      // if (PastryQuantity < 3)
+      // {
+      //   pastrySumCost = _PastryCost * PastryQuantity;
+      // }
+      
+// pastrySumCost = _PastryCost * (PastryQuantity / 3);
+
+        // double numberOfDiscountedPastries = PastryQuantity / 3;
+
+        // pastrySumCost = _PastryCost * PastryQuantity - (_PastryDiscount * (PastryQuantity / 3));
+
+ // else if (something)
+      // {
+      //   double numberOfDiscountedPastries = PastryQuantity / 3;
+      //   // ...?
+      // }

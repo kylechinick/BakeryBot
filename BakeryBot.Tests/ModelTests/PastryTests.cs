@@ -28,7 +28,7 @@ namespace BakeryBot.Tests
     public void PastryCost_ReturnCostForThreePastry_Int()
     {
       int pastryQuantity = 3;
-      double pastryCost = 10;
+      double pastryCost = 5;
       Pastry pastry = new Pastry(pastryQuantity);
       Assert.AreEqual(pastryCost, pastry.getPastryCost());
     }
