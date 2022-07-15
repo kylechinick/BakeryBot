@@ -28,26 +28,11 @@ namespace BakeryBot.Models
       }
       else
       {
-        pastrySumCost = _PastryCost * PastryQuantity;
+        double discountedPastryQuantity = PastryQuantity / 3;
+        double standardRatePastryQuantity = PastryQuantity - discountedPastryQuantity;
+        pastrySumCost = (_PastryCost * standardRatePastryQuantity) + (_PastryDiscount * discountedPastryQuantity);
       }
       return pastrySumCost;
     }
   }
 }
-
-      // if (PastryQuantity < 3)
-      // {
-      //   pastrySumCost = _PastryCost * PastryQuantity;
-      // }
-      
-// pastrySumCost = _PastryCost * (PastryQuantity / 3);
-
-        // double numberOfDiscountedPastries = PastryQuantity / 3;
-
-        // pastrySumCost = _PastryCost * PastryQuantity - (_PastryDiscount * (PastryQuantity / 3));
-
- // else if (something)
-      // {
-      //   double numberOfDiscountedPastries = PastryQuantity / 3;
-      //   // ...?
-      // }
