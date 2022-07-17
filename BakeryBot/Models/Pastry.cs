@@ -29,7 +29,7 @@ namespace BakeryBot.Models
       else
       {
         double discountedPastryQuantity = PastryQuantity / 3;
-        double standardRatePastryQuantity = PastryQuantity - discountedPastryQuantity;
+        double standardRatePastryQuantity = PastryQuantity - (discountedPastryQuantity * 3);
         pastrySumCost = (_PastryCost * standardRatePastryQuantity) + (_PastryDiscount * discountedPastryQuantity);
       }
       return pastrySumCost;

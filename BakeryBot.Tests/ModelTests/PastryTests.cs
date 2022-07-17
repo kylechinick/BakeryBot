@@ -28,25 +28,17 @@ namespace BakeryBot.Tests
     public void PastryCost_ReturnCostForThreePastry_Int()
     {
       int pastryQuantity = 3;
-      double pastryCost = 5;
+      double _PastryDiscount = 5;
       Pastry pastry = new Pastry(pastryQuantity);
-      Assert.AreEqual(pastryCost, pastry.getPastryCost());
+      Assert.AreEqual(_PastryDiscount, pastry.getPastryCost());
     }
     [TestMethod]
     public void PastryCost_ReturnCostForFourPastry_Int()
     {
       int pastryQuantity = 4;
-      double pastryCost = 4;
+      double pastryCost = 7;
       Pastry pastry = new Pastry(pastryQuantity);
       Assert.AreEqual(pastryCost, pastry.getPastryCost());
     }
-    // [TestMethod]
-    // public void PastryCost_ReturnCostForNonPowerOfThreePastry_Int()
-    // {
-    //   int pastryQuantity = 17;
-    //   double pastryCost = 60;
-    //   Pastry pastry = new Pastry(pastryQuantity);
-    //   Assert.AreEqual(pastryCost, pastry.getPastryCost());
-    // }
   }
 }
