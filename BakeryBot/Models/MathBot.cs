@@ -4,10 +4,10 @@ namespace BakeryBot.Models
 {
   public class MathBot
   {
-    public int FirstNumberToAdd { get; set; }
-    public int SecondNumberToAdd { get; set; }
+    public double FirstNumberToAdd { get; set; }
+    public double SecondNumberToAdd { get; set; }
 
-    public MathBot(int firstNumberToAdd, int secondNumberToAdd)
+    public MathBot(double firstNumberToAdd, double secondNumberToAdd)
     {
       FirstNumberToAdd = firstNumberToAdd;
       SecondNumberToAdd = secondNumberToAdd;
@@ -15,7 +15,8 @@ namespace BakeryBot.Models
 
     public double adderBot()
     {      
-      return 0;
+      double adderSum = FirstNumberToAdd + SecondNumberToAdd;
+      return adderSum;
     }
   }
 }
