@@ -10,6 +10,7 @@ namespace BakeryBot
     public static void Main()
     {
       Console.WriteLine("** BAKERYBOT IS NOW ACTIVE **");
+      Console.WriteLine("Welcome to Pierre's Bakery!");
       Console.WriteLine("Today's Menu: \n Bread  - $5 - DISCOUNT: buy 2, get 1 free! \n Pastry - $2 - DISCOUNT: 3 for $5");
 
       Console.WriteLine("How many BREAD orders do you want?");
@@ -22,7 +23,8 @@ namespace BakeryBot
       Pastry pastry = new Pastry(pastryOrderQuantity);
       double pastryOrderCost = pastry.getPastryCost();
 
-      double totalOrderCost = breadOrderCost + pastryOrderCost;
+      MathBot mathBot = new MathBot(breadOrderCost, pastryOrderCost);
+      double totalOrderCost = mathBot.adderBot();
       Console.WriteLine("Bread Cost: " + breadOrderCost);
       Console.WriteLine("Pastry Cost: " + pastryOrderCost);
       Console.WriteLine("Total Order Cost: " + totalOrderCost);
